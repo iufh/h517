@@ -621,7 +621,6 @@
          "style":{
         //all SVG styles allowed
             "fill":"red",
-            "fill-opacity":0.5
          },
 
             "coordinates":[  
