@@ -617,6 +617,14 @@
          },
          "geometry":{  
             "type":"LineString",
+
+      "color": "red",
+      "category": "hue",
+      "code": {
+        "rgba": [255,0,0,1],
+        "hex": "#FF0"
+     },
+
             "coordinates":[  
                [  
                   "3.4059660",
