@@ -618,12 +618,11 @@
          "geometry":{  
             "type":"LineString",
 
-   "style":{
+         "style":{
         //all SVG styles allowed
-        "fill":"red",
-        "stroke-width":"3",
-        "fill-opacity":1
-    },
+            "fill":"red",
+            "fill-opacity":0.5
+         },
 
             "coordinates":[  
                [  
