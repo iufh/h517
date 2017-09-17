@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>H517 Project1</title>
+    <style>
+       path {
+              fill: none;
+              stroke: #000;
+              stroke-width: .1px;
+              stroke-linejoin: round;
+              stroke-linecap: round;
+            }
+    </style>
+
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="http://d3js.org/d3.geo.projection.v0.min.js"></script>
+  </head>
+
+
+  <body>
+    <script>
+
+     var margin = {top: 20, right: 20, bottom: 30, left: 50},
+         width = 960 - margin.left - margin.right,
+         height = 500 - margin.top - margin.bottom;
+ 
+     var svg = d3.select("body").append("svg")
+             .attr("width", width + margin.left + margin.right)
+             .attr("height", height + margin.top + margin.bottom)
+             .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+     var groups = svg.append("g");
+     var graticule = d3.geo.graticule();
+
+     d3.json("https://raw.githubusercontent.com/iufh/h517/master/streets2.json", function(error, json) {
+
+             if (error)   
+             return console.error(error); 
+     
+             console.log(json);
+
+/*     svg.selectAll("path")  
+             .append("path")  
+             .attr("stroke","#000")  
+             .attr("stroke-width",1)  
+             .attr("fill", function(d,i){  
+                 return color(i);  
+            })  
+             .attr("d",function(d){  
+                  return path(d);  
+            })  
+             .on("mouseover",function(d,i){  
+                 d3.select(this)  
+                    .attr("fill","yellow");  
+            })  
+             .on("mouseout",function(d,i){  
+                d3.select(this)  
+                    .attr("fill",color(i));  
+            });  
+*/
+     
+
+
+              var center = d3.geo.centroid(json)
+                var scale  = 80;
+                var offset = [width/2, height/2];
+                var projection = d3.geo.mercator().scale(scale).center(center)
+                    .translate(offset);
+
+
+
+     var path = d3.geo.path()
+             .projection(projection);
+
+
+
+                var bounds  = path.bounds(json);
+                var hscale  = scale*width  / (bounds[1][0] - bounds[0][0]) -180 ;
+                var vscale  = scale*height / (bounds[1][1] - bounds[0][1]) ;
+                var scale   = (hscale < vscale) ? hscale : vscale;
+                var offset  = [width - (bounds[0][0] + bounds[1][0])/2, height - (bounds[0][1] + bounds[1][1]+200)/2];
+                center1 = center;
+                scale1 = scale;
+                offset1 =  offset;
+
+                projection = d3.geo.mercator().center(center)
+                    .scale(scale).translate(offset);
+                path = path.projection(projection);   
+
+     path = path.projection(projection);   
+
+     var points = json.features.filter(function(d){
+         return d.geometry.type == "Point";});
+
+     var lines = json.features.filter(function(d){
+         return d.geometry.type == "LineString";});
+
+     var workhouse = json.features.filter(function(d){
+         return d.properties.name == "WORKHOUSE";});
+
+     var brewery = json.features.filter(function(d){
+         return d.properties.name == "BREWERY";});
+
+     var pointSvg = svg.append("g").attr("class", "point");
+     var lineSvg = svg.append("g").attr("class", "linestring");
+     var workhouseSvg = svg.append("g").attr("class", "workhouse");
+     var brewerySvg = svg.append("g").attr("class", "brewery");
+     var deathSvg = svg.append("g").attr("class", "deaths");                
+
+     lineSvg.selectAll("path")
+             .data(lines)
+             .enter()
+             .append("path")
+             .attr("d", path)
+             .style("stroke-width", "2")
+             .style("stroke", "black");
+
+     pointSvg.selectAll("rect")
+             .data(points)
+             .enter()
+             .append("rect")
+             .attr("width", 10)
+             .attr("height", 10)
+             .attr("transform", function(d) {
+             return "translate(" + projection(d.geometry.coordinates) + ")";
+            })
+             .style("opacity", "1.0")
+             .style("fill", "black")
+             .style("stroke-width", "1")
+             .style("stroke", "black")
+             .classed("pin", true);
+
+       workhouseSvg.selectAll("path")
+             .data(workhouse)
+             .enter()
+             .append("path")
+             .attr("d", path)
+             .style("stroke-width", "1")
+             .style("stroke", "black")
+             .style("fill", "yellow");
+
+
+       brewerySvg.selectAll("path")
+             .data(brewery)
+             .enter()
+             .append("path")
+             .attr("d", path)
+             .style("stroke-width", "1")
+             .style("stroke", "black")
+             .style("fill", "pink");
+
+
+
+
+ });
+
+
+
+/* d3.csv("https://raw.githubusercontent.com/iufh/h517/master/streets.csv",function(error,csvdata){
+        
+            if(error){
+                console.log(error);
+            }
+            console.log(csvdata);
+            
+        });
+    */
+/*     d3.csv("https://raw.githubusercontent.com/iufh/h517/master/streets.csv", function(data) {
+
+data.forEach(function(d,i) {
+      	
+      d.x = +d.x;
+      d.y = +d.y;
+
+     });
+
+console.log(data[0].x);
+
+     var j = 0;
+     var streets;
+      data.forEach(function(d,i) {
+      	
+      	  				console.log(d.y);
+
+      	for(var x = 1; x<d.y ;x+=1){
+
+      		streets[j].x = d.x;
+      		streets[j].y = d.y;
+      		i+=1;
+      	}
+
+      	j+=1;
+
+     });
+console.log(j);
+
+});
+
+*/
+
+    </script>
+
+
+
+  </body>
+</html>
