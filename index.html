@@ -14,27 +14,57 @@
             }
     </style>
 
-    <script src="http://d3js.org/d3.v3.min.js"></script>
-    <script src="http://d3js.org/d3.geo.projection.v0.min.js"></script>
+    <script src="http://d3js.org/d3.v3.js"></script>
+    <script src="http://d3js.org/d3.geo.projection.v0.js"></script>
   </head>
 
 
   <body>
+
     <script>
 
-     var margin = {top: 20, right: 20, bottom: 30, left: 50},
-         width = 960 - margin.left - margin.right,
-         height = 500 - margin.top - margin.bottom;
+      var zoom = d3.behavior.zoom()
+             .translate([0, 0])
+             .scaleExtent([1, 2])
+             .scale(1)
+             .on("zoom", zoomed);
+ 
+       function zoomed() {
+          x = d3.event.translate[0];
+          y = d3.event.translate[1];
+          s = d3.event.scale;
+
+              d3.select(this).attr("transform", 
+              "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
+       }
+
+       d3.select('#reset').on('click',function(){
+       d3.transition().duration(250).tween("zoom", function() {
+       var si = d3.interpolate(s, 1);
+       var xi = d3.interpolate(x, 0);
+       var yi = d3.interpolate(y, 0);
+       return function(t){
+       svg.call(zoom.translate([xi(t),yi(t)]).scale(si(t)).event);
+       }
+  });
+});
+
+     var margin = {top: 0, right: 0, bottom: 0, left: 0},
+         width = 700,
+         height = 700;
  
      var svg = d3.select("body").append("svg")
-             .attr("width", width + margin.left + margin.right)
-             .attr("height", height + margin.top + margin.bottom)
-             .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+             .attr("width", width)
+             .attr("height", height)
+             .attr("transform", "rotate(" + 0 + ")")
+             .style({'border':'0px solid #000'})
+             .call(zoom);
+
 
      var groups = svg.append("g");
      var graticule = d3.geo.graticule();
 
-     d3.json("https://raw.githubusercontent.com/iufh/h517/master/streets2.json", function(error, json) {
+     d3.json("https://raw.githubusercontent.com/iufh/h517/master/uckyou.json", function(error, json) {
 
              if (error)   
              return console.error(error); 
@@ -62,34 +92,26 @@
 */
      
 
-
-              var center = d3.geo.centroid(json)
-                var scale  = 80;
-                var offset = [width/2, height/2];
-                var projection = d3.geo.mercator().scale(scale).center(center)
-                    .translate(offset);
-
+     var center = d3.geo.centroid(json)
+     var scale  = 20;
+     var offset = [width/2, height/2];
+     var projection = d3.geo.mercator().scale(scale).center(center).translate(offset);
 
 
      var path = d3.geo.path()
              .projection(projection);
 
 
+     var bounds  = path.bounds(json);
+     var hscale  = scale*650  / (bounds[1][0] - bounds[0][0]) ;
+     var vscale  = scale*650 / (bounds[1][1] - bounds[0][1]) ;
+     var scale   = (hscale < vscale) ? hscale : vscale;
+     var offset  = [width - (bounds[0][0] + bounds[1][0]-20)/2, height - (bounds[0][1] + bounds[1][1]+150)/2];
 
-                var bounds  = path.bounds(json);
-                var hscale  = scale*width  / (bounds[1][0] - bounds[0][0]) -180 ;
-                var vscale  = scale*height / (bounds[1][1] - bounds[0][1]) ;
-                var scale   = (hscale < vscale) ? hscale : vscale;
-                var offset  = [width - (bounds[0][0] + bounds[1][0])/2, height - (bounds[0][1] + bounds[1][1]+200)/2];
-                center1 = center;
-                scale1 = scale;
-                offset1 =  offset;
-
-                projection = d3.geo.mercator().center(center)
-                    .scale(scale).translate(offset);
-                path = path.projection(projection);   
-
+     projection = d3.geo.mercator().center(center).scale(scale).translate(offset);
      path = path.projection(projection);   
+
+
 
      var points = json.features.filter(function(d){
          return d.geometry.type == "Point";});
@@ -98,10 +120,10 @@
          return d.geometry.type == "LineString";});
 
      var workhouse = json.features.filter(function(d){
-         return d.properties.name == "WORKHOUSE";});
+         return d.properties.name == "WorkHouse";});
 
      var brewery = json.features.filter(function(d){
-         return d.properties.name == "BREWERY";});
+         return d.properties.name == "Brewery";});
 
      var pointSvg = svg.append("g").attr("class", "point");
      var lineSvg = svg.append("g").attr("class", "linestring");
@@ -114,15 +136,15 @@
              .enter()
              .append("path")
              .attr("d", path)
-             .style("stroke-width", "2")
-             .style("stroke", "black");
+             .style("stroke-width", "1")
+             .style("stroke", "black")
+             .attr("transform", "rotate(" + 0 + ")");
 
-     pointSvg.selectAll("rect")
+     pointSvg.selectAll("circle")
              .data(points)
              .enter()
-             .append("rect")
-             .attr("width", 10)
-             .attr("height", 10)
+             .append("circle")
+             .attr("r", 5)
              .attr("transform", function(d) {
              return "translate(" + projection(d.geometry.coordinates) + ")";
             })
@@ -139,8 +161,8 @@
              .attr("d", path)
              .style("stroke-width", "1")
              .style("stroke", "black")
-             .style("fill", "yellow");
-
+             .style("fill", "yellow")
+             .attr("transform", "rotate(" + 0 + ")");
 
        brewerySvg.selectAll("path")
              .data(brewery)
@@ -149,7 +171,8 @@
              .attr("d", path)
              .style("stroke-width", "1")
              .style("stroke", "black")
-             .style("fill", "pink");
+             .style("fill", "pink")
+             .attr("transform", "rotate(" + 0 + ")");
 
 
 
@@ -201,7 +224,7 @@ console.log(j);
 */
 
     </script>
-
+   <button id="reset">reset</button><Br/>
 
 
   </body>
