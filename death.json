@@ -7,7 +7,7 @@
          "properties":{  
             "age":"0-10",
             "sex":"female",
-            "deathday":"19-Aug",
+            "deathday":"19-Aug"
          },
          "geometry":{  
             "type":"Point",
@@ -23,7 +23,7 @@
          "properties":{  
             "age":"11-20",
             "sex":"male",
-            "deathday":"31-Aug", 
+            "deathday":"31-Aug" 
          },
          "geometry":{  
             "type":"Point",
@@ -39,7 +39,7 @@
          "properties":{  
             "age":"21-40",
             "sex":"female",
-            "deathday":"26-Aug",
+            "deathday":"26-Aug"
          },
          "geometry":{  
             "type":"Point",
@@ -55,7 +55,7 @@
          "properties":{  
             "age":"41-60",
             "sex":"male",
-            "deathday":"30-Aug",
+            "deathday":"30-Aug"
          },
          "geometry":{  
             "type":"Point",
@@ -71,7 +71,7 @@
          "properties":{  
             "age":"61-80",
             "sex":"female",
-            "deathday":"20-Aug",
+            "deathday":"20-Aug"
          },
          "geometry":{  
             "type":"Point",
@@ -87,7 +87,7 @@
          "properties":{  
             "age":"> 80",
             "sex":"male",
-            "deathday":"23-Aug",
+            "deathday":"23-Aug"
          },
          "geometry":{  
             "type":"Point",
@@ -103,7 +103,7 @@
          "properties":{  
             "age":"0-10",
             "sex":"male",
-            "deathday":"21-Aug", 
+            "deathday":"21-Aug" 
          },
          "geometry":{  
             "type":"Point",
@@ -120,7 +120,7 @@
          "properties":{  
             "age":"61-80",
             "sex":"female",
-            "deathday":"24-Aug",
+            "deathday":"24-Aug"
          },
          "geometry":{  
             "type":"Point",
@@ -137,7 +137,7 @@
          "properties":{  
             "age":"61-80",
             "sex":"female",
-            "deathday":"27-Aug",
+            "deathday":"27-Aug"
          },
          "geometry":{  
             "type":"Point",
@@ -153,7 +153,7 @@
          "properties":{  
             "age":"21-40",
             "sex":"male",
-            "deathday":"28-Aug",
+            "deathday":"28-Aug"
          },
          "geometry":{  
             "type":"Point",
@@ -169,7 +169,7 @@
          "properties":{  
             "age":"0-10",
             "sex":"male",
-            "deathday":"29-Aug",
+            "deathday":"29-Aug"
            
          },
          "geometry":{  
@@ -186,7 +186,7 @@
          "properties":{  
             "age":"61-80",
             "sex":"female",
-            "deathday":"30-Aug",
+            "deathday":"30-Aug"
          },
          "geometry":{  
             "type":"Point",
@@ -202,7 +202,7 @@
          "properties":{  
             "age":"61-80",
             "sex":"male",
-            "deathday":"30-Aug",
+            "deathday":"30-Aug"
          },
          "geometry":{  
             "type":"Point",
@@ -218,7 +218,7 @@
          "properties":{  
             "age":"61-80",
             "sex":"female",
-            "deathday":"30-Aug",
+            "deathday":"30-Aug"
          },
          "geometry":{  
             "type":"Point",
@@ -234,7 +234,7 @@
          "properties":{  
             "age":"0-10",
             "sex":"female",
-            "deathday":"30-Aug",
+            "deathday":"30-Aug"
            
          },
          "geometry":{  
@@ -251,7 +251,7 @@
          "properties":{  
             "age":"0-10",
             "sex":"female",
-            "deathday":"30-Aug",
+            "deathday":"30-Aug"
            
          },
          "geometry":{  
@@ -268,7 +268,7 @@
          "properties":{  
             "age":"41-60",
             "sex":"male",
-            "deathday":"30-Aug",
+            "deathday":"30-Aug"
          },
          "geometry":{  
             "type":"Point",
@@ -284,7 +284,7 @@
          "properties":{  
             "age":"> 80",
             "sex":"female",
-            "deathday":"30-Aug",
+            "deathday":"30-Aug"
          },
          "geometry":{  
             "type":"Point",
@@ -300,7 +300,7 @@
          "properties":{  
             "age":"> 80",
             "sex":"male",
-            "deathday":"30-Aug",
+            "deathday":"30-Aug"
          },
          "geometry":{  
             "type":"Point",
@@ -316,7 +316,7 @@
          "properties":{  
             "age":"> 80",
             "sex":"female",
-            "deathday":"31-Aug",
+            "deathday":"31-Aug"
          },
          "geometry":{  
             "type":"Point",
@@ -332,7 +332,7 @@
          "properties":{  
             "age":"0-10",
             "sex":"male",
-            "deathday":"31-Aug",
+            "deathday":"31-Aug"
            
          },
          "geometry":{  
@@ -349,7 +349,7 @@
          "properties":{  
             "age":"61-80",
             "sex":"female",
-            "deathday":"31-Aug",
+            "deathday":"31-Aug"
          },
          "geometry":{  
             "type":"Point",
@@ -365,7 +365,7 @@
          "properties":{  
             "age":"21-40",
             "sex":"male",
-            "deathday":"31-Aug",
+            "deathday":"31-Aug"
          },
          "geometry":{  
             "type":"Point",
@@ -381,7 +381,7 @@
          "properties":{  
             "age":"> 80",
             "sex":"male",
-            "deathday":"31-Aug",
+            "deathday":"31-Aug"
          },
          "geometry":{  
             "type":"Point",
@@ -397,7 +397,7 @@
          "properties":{  
             "age":"21-40",
             "sex":"female",
-            "deathday":"31-Aug",
+            "deathday":"31-Aug"
          },
          "geometry":{  
             "type":"Point",
@@ -413,7 +413,7 @@
          "properties":{  
             "age":"61-80",
             "sex":"male",
-            "deathday":"31-Aug",
+            "deathday":"31-Aug"
          },
          "geometry":{  
             "type":"Point",
@@ -429,7 +429,7 @@
          "properties":{  
             "age":"0-10",
             "sex":"male",
-            "deathday":"31-Aug",
+            "deathday":"31-Aug"
            
          },
          "geometry":{  
@@ -446,7 +446,7 @@
          "properties":{  
             "age":"> 80",
             "sex":"female",
-            "deathday":"31-Aug",
+            "deathday":"31-Aug"
          },
          "geometry":{  
             "type":"Point",
@@ -462,7 +462,7 @@
          "properties":{  
             "age":"> 80",
             "sex":"male",
-            "deathday":"31-Aug",
+            "deathday":"31-Aug"
          },
          "geometry":{  
             "type":"Point",
@@ -478,7 +478,7 @@
          "properties":{  
             "age":"0-10",
             "sex":"female",
-            "deathday":"31-Aug",
+            "deathday":"31-Aug"
            
          },
          "geometry":{  
@@ -495,7 +495,7 @@
          "properties":{  
             "age":"61-80",
             "sex":"female",
-            "deathday":"31-Aug",
+            "deathday":"31-Aug"
          },
          "geometry":{  
             "type":"Point",
@@ -511,7 +511,7 @@
          "properties":{  
             "age":"0-10",
             "sex":"male",
-            "deathday":"31-Aug",
+            "deathday":"31-Aug"
            
          },
          "geometry":{  
@@ -528,7 +528,7 @@
          "properties":{  
             "age":"21-40",
             "sex":"female",
-            "deathday":"31-Aug",
+            "deathday":"31-Aug"
          },
          "geometry":{  
             "type":"Point",
@@ -544,7 +544,7 @@
          "properties":{  
             "age":"> 80",
             "sex":"male",
-            "deathday":"31-Aug",
+            "deathday":"31-Aug"
          },
          "geometry":{  
             "type":"Point",
@@ -560,7 +560,7 @@
          "properties":{  
             "age":"21-40",
             "sex":"female",
-            "deathday":"31-Aug",
+            "deathday":"31-Aug"
          },
          "geometry":{  
             "type":"Point",
@@ -576,7 +576,7 @@
          "properties":{  
             "age":"0-10",
             "sex":"male",
-            "deathday":"31-Aug",
+            "deathday":"31-Aug"
            
          },
          "geometry":{  
@@ -593,7 +593,7 @@
          "properties":{  
             "age":"0-10",
             "sex":"female",
-            "deathday":"31-Aug",
+            "deathday":"31-Aug"
            
          },
          "geometry":{  
@@ -610,7 +610,7 @@
          "properties":{  
             "age":"> 80",
             "sex":"male",
-            "deathday":"31-Aug",
+            "deathday":"31-Aug"
          },
          "geometry":{  
             "type":"Point",
@@ -626,7 +626,7 @@
          "properties":{  
             "age":"0-10",
             "sex":"male",
-            "deathday":"31-Aug",
+            "deathday":"31-Aug"
            
          },
          "geometry":{  
@@ -643,7 +643,7 @@
          "properties":{  
             "age":"61-80",
             "sex":"male",
-            "deathday":"31-Aug",
+            "deathday":"31-Aug"
          },
          "geometry":{  
             "type":"Point",
@@ -659,7 +659,7 @@
          "properties":{  
             "age":"> 80",
             "sex":"male",
-            "deathday":"31-Aug",
+            "deathday":"31-Aug"
          },
          "geometry":{  
             "type":"Point",
@@ -675,7 +675,7 @@
          "properties":{  
             "age":"> 80",
             "sex":"male",
-            "deathday":"31-Aug",
+            "deathday":"31-Aug"
          },
          "geometry":{  
             "type":"Point",
@@ -691,7 +691,7 @@
          "properties":{  
             "age":"61-80",
             "sex":"female",
-            "deathday":"31-Aug",
+            "deathday":"31-Aug"
          },
          "geometry":{  
             "type":"Point",
@@ -707,7 +707,7 @@
          "properties":{  
             "age":"0-10",
             "sex":"male",
-            "deathday":"31-Aug",
+            "deathday":"31-Aug"
            
          },
          "geometry":{  
@@ -724,7 +724,7 @@
          "properties":{  
             "age":"0-10",
             "sex":"male",
-            "deathday":"31-Aug",
+            "deathday":"31-Aug"
            
          },
          "geometry":{  
@@ -741,7 +741,7 @@
          "properties":{  
             "age":"61-80",
             "sex":"male",
-            "deathday":"31-Aug",
+            "deathday":"31-Aug"
          },
          "geometry":{  
             "type":"Point",
@@ -757,7 +757,7 @@
          "properties":{  
             "age":"> 80",
             "sex":"male",
-            "deathday":"31-Aug",
+            "deathday":"31-Aug"
          },
          "geometry":{  
             "type":"Point",
@@ -773,7 +773,7 @@
          "properties":{  
             "age":"0-10",
             "sex":"male",
-            "deathday":"31-Aug",
+            "deathday":"31-Aug"
            
          },
          "geometry":{  
@@ -790,7 +790,7 @@
          "properties":{  
             "age":"> 80",
             "sex":"female",
-            "deathday":"31-Aug",
+            "deathday":"31-Aug"
          },
          "geometry":{  
             "type":"Point",
@@ -806,7 +806,7 @@
          "properties":{  
             "age":"0-10",
             "sex":"male",
-            "deathday":"31-Aug",
+            "deathday":"31-Aug"
            
          },
          "geometry":{  
@@ -823,7 +823,7 @@
          "properties":{  
             "age":"0-10",
             "sex":"male",
-            "deathday":"31-Aug",
+            "deathday":"31-Aug"
            
          },
          "geometry":{  
@@ -840,7 +840,7 @@
          "properties":{  
             "age":"21-40",
             "sex":"male",
-            "deathday":"31-Aug",
+            "deathday":"31-Aug"
          },
          "geometry":{  
             "type":"Point",
@@ -856,7 +856,7 @@
          "properties":{  
             "age":"> 80",
             "sex":"female",
-            "deathday":"31-Aug",
+            "deathday":"31-Aug"
          },
          "geometry":{  
             "type":"Point",
@@ -872,7 +872,7 @@
          "properties":{  
             "age":"61-80",
             "sex":"female",
-            "deathday":"31-Aug",
+            "deathday":"31-Aug"
          },
          "geometry":{  
             "type":"Point",
@@ -888,7 +888,7 @@
          "properties":{  
             "age":"21-40",
             "sex":"female",
-            "deathday":"31-Aug",
+            "deathday":"31-Aug"
          },
          "geometry":{  
             "type":"Point",
@@ -904,7 +904,7 @@
          "properties":{  
             "age":"41-60",
             "sex":"female",
-            "deathday":"31-Aug",
+            "deathday":"31-Aug"
          },
          "geometry":{  
             "type":"Point",
@@ -920,7 +920,7 @@
          "properties":{  
             "age":"21-40",
             "sex":"female",
-            "deathday":"31-Aug",
+            "deathday":"31-Aug"
          },
          "geometry":{  
             "type":"Point",
@@ -936,7 +936,7 @@
          "properties":{  
             "age":"21-40",
             "sex":"male",
-            "deathday":"31-Aug",
+            "deathday":"31-Aug"
          },
          "geometry":{  
             "type":"Point",
@@ -952,7 +952,7 @@
          "properties":{  
             "age":"> 80",
             "sex":"male",
-            "deathday":"31-Aug",
+            "deathday":"31-Aug"
          },
          "geometry":{  
             "type":"Point",
@@ -968,7 +968,7 @@
          "properties":{  
             "age":"0-10",
             "sex":"male",
-            "deathday":"31-Aug",
+            "deathday":"31-Aug"
            
          },
          "geometry":{  
@@ -985,7 +985,7 @@
          "properties":{  
             "age":"41-60",
             "sex":"male",
-            "deathday":"31-Aug",
+            "deathday":"31-Aug"
          },
          "geometry":{  
             "type":"Point",
@@ -1001,7 +1001,7 @@
          "properties":{  
             "age":"0-10",
             "sex":"female",
-            "deathday":"31-Aug",
+            "deathday":"31-Aug"
            
          },
          "geometry":{  
@@ -1018,7 +1018,7 @@
          "properties":{  
             "age":"> 80",
             "sex":"male",
-            "deathday":"31-Aug",
+            "deathday":"31-Aug"
          },
          "geometry":{  
             "type":"Point",
@@ -1034,7 +1034,7 @@
          "properties":{  
             "age":"> 80",
             "sex":"male",
-            "deathday":"31-Aug",
+            "deathday":"31-Aug"
          },
          "geometry":{  
             "type":"Point",
@@ -1050,7 +1050,7 @@
          "properties":{  
             "age":"0-10",
             "sex":"female",
-            "deathday":"31-Aug",
+            "deathday":"31-Aug"
            
          },
          "geometry":{  
@@ -1067,7 +1067,7 @@
          "properties":{  
             "age":"> 80",
             "sex":"male",
-            "deathday":"31-Aug",
+            "deathday":"31-Aug"
          },
          "geometry":{  
             "type":"Point",
@@ -1083,7 +1083,7 @@
          "properties":{  
             "age":"0-10",
             "sex":"female",
-            "deathday":"31-Aug",
+            "deathday":"31-Aug"
            
          },
          "geometry":{  
@@ -1101,7 +1101,7 @@
          "properties":{  
             "age":"11-20",
             "sex":"female",
-            "deathday":"31-Aug",
+            "deathday":"31-Aug"
             
          },
          "geometry":{  
@@ -1118,7 +1118,7 @@
          "properties":{  
             "age":"0-10",
             "sex":"female",
-            "deathday":"31-Aug",
+            "deathday":"31-Aug"
            
          },
          "geometry":{  
@@ -1135,7 +1135,7 @@
          "properties":{  
             "age":"11-20",
             "sex":"female",
-            "deathday":"31-Aug",
+            "deathday":"31-Aug"
             
          },
          "geometry":{  
@@ -1152,7 +1152,7 @@
          "properties":{  
             "age":"0-10",
             "sex":"male",
-            "deathday":"31-Aug",
+            "deathday":"31-Aug"
            
          },
          "geometry":{  
@@ -1169,7 +1169,7 @@
          "properties":{  
             "age":"41-60",
             "sex":"female",
-            "deathday":"31-Aug",
+            "deathday":"31-Aug"
          },
          "geometry":{  
             "type":"Point",
@@ -1185,7 +1185,7 @@
          "properties":{  
             "age":"> 80",
             "sex":"female",
-            "deathday":"31-Aug",
+            "deathday":"31-Aug"
          },
          "geometry":{  
             "type":"Point",
@@ -1201,7 +1201,7 @@
          "properties":{  
             "age":"0-10",
             "sex":"male",
-            "deathday":"31-Aug",
+            "deathday":"31-Aug"
            
          },
          "geometry":{  
